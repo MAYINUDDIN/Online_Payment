@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import useStatement from '../hooks/useStatement';
+import Pol_details from './Pol_details';
 
 const PolicyStatement = () => {
 
-    const [da] = useStatement([]);
+    const [d] = useStatement();
 
-    console.log(da);
+    console.log(d);
 
 
     const [relode, setRelode] = useState(false);
@@ -60,7 +61,13 @@ const PolicyStatement = () => {
 
 
 
+
+
             </div>
+            {
+
+                d.map(product => <Pol_details key={product.id} product={product}></Pol_details>)
+            }
         </div>
 
 
