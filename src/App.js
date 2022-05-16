@@ -4,6 +4,7 @@ import './App.css';
 import About from './Pages/About/About';
 import Home from './Pages/Home/Home';
 import Notfound from './Pages/NotFound/Notfound';
+import PolicyStatement from './Pages/PolicyStatement/PolicyStatement';
 import Navbar from './Pages/Shared/Navbar';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />}>Home</Route>
         <Route path='/about' element={<About />}>Home</Route>
+        <Route path='/policy_details' element={<PolicyStatement />}>PolicyStatement</Route>
         <Route path='*' element={<Notfound />}>Home</Route>
       </Routes>
 
