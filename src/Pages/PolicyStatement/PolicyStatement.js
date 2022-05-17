@@ -4,48 +4,32 @@ import Pol_details from './Pol_details';
 
 const PolicyStatement = () => {
 
-    const [d] = useStatement();
+    // const [d] = useStatement();
 
-    console.log(d);
-
+    // console.log(d);
 
     const [relode, setRelode] = useState(false);
-    const [statement, setStatement] = useState([]);
+    const [astatement, setaStatement] = useState([]);
 
-    // const handleStatement = event => {
-    //     event.preventDefault();
-
-    //     const pol_no = event.target.pol_no.value;
-    //     console.log(pol_no)
-
-    //     const url = `http://172.31.99.56/payment/pol_statement.php?POLICY_NO=${pol_no}&&DOB=01-JAN-79`;
-
-    //     fetch(url)
-    //         .then(Response => Response.json())
-    //         .then(data => (data));
-
-    // }
+    // console.log(astatement);
     const handleStatement = event => {
         event.preventDefault();
-
         const pol_no = event.target.pol_no.value;
-        console.log(pol_no)
-
+        // console.log(pol_no)
         const url = `http://172.31.99.56/payment/pol_statement.php?POLICY_NO=${pol_no}&&DOB=01-JAN-79`;
-
         fetch(url)
             .then(Response => Response.json())
-            .then(data => setStatement(data));
+            .then(data => setaStatement(data));
 
     }
 
     return (
-        <div className="div">
-            <h1 className='text-center mt-5 uppercase'>Please Provide Policy Details </h1>
+        <div className="div m-5">
+            <h1 className='text-center mt-5 uppercase font-bold text-info text-xl'>Please Provide Policy Details  </h1>
 
             <div className="flex justify-center ">
                 <div class="w-full max-w-md  py-12">
-                    <form onSubmit={handleStatement} class="bg-white shadow-xl rounded px-8 pt-6 pb-8 mb-4 p-5">
+                    <form onSubmit={handleStatement} class="bg-white shadow-xl card rounded bordered px-8 pt-2 pb-8 mb-1 p-5">
                         <div class="mb-4">
                             <label class="block text-left text-gray-700 text-sm  mb-2" for="username">
                                 *This  fields are mandatory
@@ -66,7 +50,7 @@ const PolicyStatement = () => {
             </div>
             {
 
-                d.map(product => <Pol_details key={product.id} product={product}></Pol_details>)
+                astatement.map(product => <Pol_details key={product.id} product={product}></Pol_details>)
             }
         </div>
 
