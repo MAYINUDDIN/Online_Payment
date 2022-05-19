@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import bkash from '../../assets/icon/bkash.jpg';
+import nagad from '../../assets/icon/nagad.jpg';
+import Rocket from '../../assets/icon/rocket.jpg';
 
 const Pay_Channel = () => {
     return (
@@ -17,6 +20,18 @@ const Pay_Channel = () => {
                                 <span class="label-text drop-shadow-sm font-bold" >Online Payment through BKash/Rocket/Nagad </span>
                                 <input type="radio" name="radio-6" class="radio checked:bg-green-500" checked />
                             </label>
+                        </div>
+                        <div className='justify-center lg:flex'>
+                            <div class="flex justify-center p-1 card w-38  bg-base-100 shadow-lg rounded bordered">
+                                <img className=' w-28 h-12' src={bkash} alt="Bkash" />
+                            </div>
+                            <div class="flex justify-center p-1 ml-2 card w-38  bg-base-100 shadow-lg rounded bordered">
+                                <img className=' lg:w-28 h-12' src={nagad} alt="Nagad" />
+                            </div>
+                            <div class="flex justify-center p-1 ml-2 card w-38  bg-base-100 shadow-lg rounded bordered">
+                                <img className=' lg:w-28 h-12' src={Rocket} alt="Rocket" />
+                            </div>
+
                         </div>
 
                         <div class="form-control">

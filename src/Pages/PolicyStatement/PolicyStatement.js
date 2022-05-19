@@ -25,10 +25,10 @@ const PolicyStatement = () => {
 
     return (
         <div className="div m-5">
-            <h1 className='text-center mt-5 uppercase font-bold text-info text-xl'>Please Provide Policy Details  </h1>
+            <h1 className='text-center mt-5 uppercase font-bold text-info text-xl  drop-shadow-sm'>Please Provide Policy Details  </h1>
 
             <div className="flex justify-center ">
-                <div class="w-full max-w-md  py-12">
+                <div class="w-full max-w-lg  py-4">
                     <form onSubmit={handleStatement} class="bg-white shadow-xl card rounded bordered px-8 pt-2 pb-8 mb-1 p-5">
                         <div class="mb-4">
                             <label class="block text-left text-gray-700 text-sm  mb-2" for="username">
@@ -38,6 +38,7 @@ const PolicyStatement = () => {
                         </div>
 
                         <button className='btn btn-success  rounded btn-sm px-12 text-white font-bold'>Submit</button>
+
 
                     </form>
 
