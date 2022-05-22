@@ -11,7 +11,7 @@ const Pol_details = ({ product }) => {
             <h4 className='mb-2 text-xl font-bold text-info  drop-shadow-sm'>Your Policy Details</h4>
 
             <div className='flex justify-center'>
-                <div class="card bg-success w-full max-w-lg  shadow-xl bordered ">
+                <div class="card bg-[#087f23] w-full max-w-lg  shadow-xl rounded ">
                     <div class="card-body">
 
                         <h2 className='text-white font-bold text-md text-left '>NAME    : {PROPOSER}</h2>

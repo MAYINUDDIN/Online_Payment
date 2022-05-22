@@ -19,7 +19,7 @@ const Navbar = () => {
                     <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         <li className=' rounded font-bold'><NavLink to='/'><AiOutlineHome />HOME</NavLink ></li>
                         <li><NavLink to='/about'>ABOUT FAREAST</NavLink ></li>
-                        <li><a><AiOutlineFileDone />CONTACT US</a></li>
+                        <li><NavLink to='/contact_us'>CONTACT US</NavLink ></li>
 
                     </ul>
                 </div>
@@ -32,7 +32,7 @@ const Navbar = () => {
                 <ul class="menu menu-horizontal p-0">
                     <li className='rounded font-bold text-white'><NavLink to='/'><AiOutlineHome />HOME</NavLink></li>
                     <li className=' pl-1 rounded  text-white hover:bg-green-60 '><NavLink to='/about'>ABOUT FAREAST</NavLink ></li>
-                    <li className='pl-1 hover:bg-green-60 text-white hover:bg-green-60'><a>CONTACT US</a></li>
+                    <li className='pl-1 hover:bg-green-60 text-white hover:bg-green-60'><NavLink to='/contact_us'>CONTACT US</NavLink ></li>
 
                 </ul>
             </div>

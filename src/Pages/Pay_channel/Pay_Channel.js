@@ -43,7 +43,7 @@ const Pay_Channel = () => {
 
 
                         <div class="card-actions justify-center mt-5">
-                            <button class="bg-gradient-to-r  from-cyan-500 to-blue-500 btn btn-success btn-sm  hover:to-success-500 rounded w-32 text-white  font-bold"><Link to='/policy_details'>SUBMIT </Link></button>
+                            <button class="bg-gradient-to-r  from-cyan-500 to-blue-500 btn btn-success btn-md text-md  hover:to-success-500 rounded w-32 text-white  font-bold"><Link to='/policy_details'>SUBMIT </Link></button>
                         </div>
                     </div>
                 </div>

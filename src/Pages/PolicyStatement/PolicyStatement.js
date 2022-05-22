@@ -37,7 +37,7 @@ const PolicyStatement = () => {
                             <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name='pol_no' id="pol_no" type="number" placeholder="Policy Number" required />
                         </div>
 
-                        <button className='btn btn-success  rounded btn-sm px-12 text-white font-bold'>Submit</button>
+                        <button className='btn btn-success bg-[#087f23]  rounded btn-sm px-12 text-white font-bold'>Submit</button>
 
 
                     </form>
