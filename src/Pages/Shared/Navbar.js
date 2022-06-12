@@ -10,7 +10,7 @@ const Navbar = () => {
     return (
 
 
-        <div class="navbar bg-green-500 lg:px-28">
+        <div class="navbar bg-[#1faa00] lg:px-28">
             <div class="navbar-start">
                 <div class="dropdown">
                     <label tabindex="0" class="btn btn-ghost lg:hidden">
@@ -25,14 +25,14 @@ const Navbar = () => {
                 </div>
 
                 <img className='w-14  shadow-lg bg-white rounded-full p-1 hidden lg:block' src={logo} />
-                <a class="btn btn-ghost normal-case text-xl text-white font-bold">FAREAST LIFE</a>
+                <a class="btn btn-ghost normal-case text-xl text-white font-bold">FAREAST ISLAMI LIFE</a>
 
             </div>
             <div class="navbar-center hidden lg:flex">
-                <ul class="menu menu-horizontal p-0">
-                    <li className='rounded font-bold text-white'><NavLink to='/'><AiOutlineHome />HOME</NavLink></li>
-                    <li className=' pl-1 rounded  text-white hover:bg-green-60 '><NavLink to='/about'>ABOUT FAREAST</NavLink ></li>
-                    <li className='pl-1 hover:bg-green-60 text-white hover:bg-green-60'><NavLink to='/contact_us'>CONTACT US</NavLink ></li>
+                <ul class="menu menu-horizontal tex-white p-0">
+                    <li className='rounded font-bold text-white'><NavLink className='text-white' to='/'><AiOutlineHome />HOME</NavLink></li>
+                    <li className=' pl-1 rounded  text-white  '><NavLink className='text-white' to='/about'>ABOUT FAREAST</NavLink ></li>
+                    <li className='pl-1  text-white '><NavLink className='text-white' to='/contact_us'>CONTACT US</NavLink ></li>
 
                 </ul>
             </div>

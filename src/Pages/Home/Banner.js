@@ -27,11 +27,29 @@ const Banner = () => {
                     <h2 class="card-title font-bold text-justify text-md drop-shadow ">How to Pay Your Premium</h2>
                     <h6 className='text-justify text-sm'>Learn about the available online channels of Fareast Premium Payment and how to pay through each channel.</h6>
                     <div class="justify-left mt-5">
-                        <button class="bg-gradient-to-r  from-cyan-500 to-blue-500 btn btn-success  hover:to-success-500 rounded w-32 text-white  font-bold">LEARN MORE</button>
+                        <label for="details" class="btn modal-button bg-gradient-to-r  from-cyan-500 to-blue-500 btn btn-success  hover:to-success-500 rounded w-32 text-white  font-bold">LEARN MORE</label>
+                    </div>
+                </div>
+
+
+
+
+
+                <input type="checkbox" id="details" class="modal-toggle" />
+                <div class="modal">
+                    <div class="modal-box w-11/12 max-w-3xl">
+                        <h3 class="font-bold text-lg">Welcome to Online Payment</h3>
+                        <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
+                        <div class="modal-action">
+                            <label for="details" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                        </div>
                     </div>
                 </div>
 
             </div>
+
+
+
 
         </div>
 

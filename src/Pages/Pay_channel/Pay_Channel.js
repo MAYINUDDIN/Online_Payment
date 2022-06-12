@@ -21,7 +21,7 @@ const Pay_Channel = () => {
                                 <input type="radio" name="radio-6" class="radio checked:bg-green-500" checked />
                             </label>
                         </div>
-                        <div className='justify-center lg:flex'>
+                        {/* <div className='justify-center lg:flex'>
                             <div class="flex justify-center p-1 card w-38  bg-base-100 shadow-lg rounded bordered">
                                 <img className=' w-28 h-12' src={bkash} alt="Bkash" />
                             </div>
@@ -32,12 +32,12 @@ const Pay_Channel = () => {
                                 <img className=' lg:w-28 h-12' src={Rocket} alt="Rocket" />
                             </div>
 
-                        </div>
+                        </div> */}
 
                         <div class="form-control">
                             <label class="label cursor-pointer">
                                 <span class="label-text drop-shadow-sm font-bold">Online Payment through Cards</span>
-                                <input type="radio" name="radio-6" class="radio checked:bg-blue-500" />
+                                <input type="radio" name="radio-6" class="radio checked:bg-green-500" />
                             </label>
                         </div>
 

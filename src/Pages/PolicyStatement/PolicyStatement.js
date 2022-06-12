@@ -11,15 +11,44 @@ const PolicyStatement = () => {
     const [relode, setRelode] = useState(false);
     const [astatement, setaStatement] = useState([]);
 
-    // console.log(astatement);
-    const handleStatement = event => {
+    console.log(astatement);
+    // const handleStatement = event => {
+    //     event.preventDefault();
+    //     const pol_no = event.target.pol_no.value;
+    //     // console.log(pol_no)
+    //     const url = `http://202.164.213.67/payment/pol_statement.php?POLICY_NO=${pol_no}&&DOB=01-JAN-79`;
+    //     fetch(url)
+    //         .then(Response => Response.json())
+    //         .then(data => setaStatement(data));
+
+    // }
+    // const handleStatement = event => {
+    //     event.preventDefault();
+    //     const pol_no = event.target.pol_no.value;
+    //     console.log(pol_no)
+    //     const url = `https://api.fareastislamilife.com/nagad/api/policy/policy-info/${pol_no}`;
+    //     fetch(url)
+    //         .then(Response => Response.json())
+    //         .then(data => console.log(data));
+
+    // }
+
+    const handleAdded = event => {
         event.preventDefault();
-        const pol_no = event.target.pol_no.value;
-        // console.log(pol_no)
-        const url = `http://172.31.99.56/payment/pol_statement.php?POLICY_NO=${pol_no}&&DOB=01-JAN-79`;
-        fetch(url)
+        const policy_no = (event.target.pol_no.value);
+        console.log(policy_no);
+        const addItem = { policy_no };
+        const url = 'https://api.fareastislamilife.com/web_api/api/policy/policy-info';
+        fetch(url, {
+            method: "POST",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(addItem)
+
+        })
             .then(Response => Response.json())
-            .then(data => setaStatement(data));
+            .then(data => setaStatement(data['policy_info']));
 
     }
 
@@ -28,8 +57,9 @@ const PolicyStatement = () => {
             <h1 className='text-center mt-5 uppercase font-bold text-info text-xl  drop-shadow-sm'>Please Provide Policy Details  </h1>
 
             <div className="flex justify-center ">
+
                 <div class="w-full max-w-lg  py-4">
-                    <form onSubmit={handleStatement} class="bg-white shadow-xl card rounded bordered px-8 pt-2 pb-8 mb-1 p-5">
+                    <form onSubmit={handleAdded} class="bg-white shadow-xl card rounded bordered px-8 pt-2 pb-8 mb-1 p-5">
                         <div class="mb-4">
                             <label class="block text-left text-gray-700 text-sm  mb-2" for="username">
                                 *This  fields are mandatory
@@ -43,10 +73,6 @@ const PolicyStatement = () => {
                     </form>
 
                 </div>
-
-
-
-
 
             </div>
             {
