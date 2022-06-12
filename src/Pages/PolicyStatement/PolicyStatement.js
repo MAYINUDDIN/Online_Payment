@@ -54,7 +54,7 @@ const PolicyStatement = () => {
 
     return (
         <div className="div m-5">
-            <h1 className='text-center mt-5 uppercase font-bold text-info text-xl  drop-shadow-sm'>Please Provide Policy Details  </h1>
+            <h1 className=' text-center mt-5 uppercase font-bold text-info lg:text-xl  drop-shadow-sm'>Please Provide Policy Details  </h1>
 
             <div className="flex justify-center ">
 

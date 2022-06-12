@@ -5,7 +5,7 @@ import nagad from '../../assets/icon/nagad.jpg';
 import Rocket from '../../assets/icon/rocket.jpg';
 
 const Pol_details = ({ product }) => {
-    const { policy_no, policy_status, proposer, NEXTPREM, amount } = product;
+    const { policy_no, policy_status, proposer, amount } = product;
     return (
         <div>
             <h4 className='mb-2 text-xl font-bold text-dark  uppercase  drop-shadow-sm'>Your Policy Details</h4>
@@ -51,13 +51,13 @@ const Pol_details = ({ product }) => {
 
                 <div className='flex justify-center'>
                     <div class="card w-full max-w-lg bg-base-100 shadow-xl rounded bordered">
-                        <div class="card-body h-48">
+                        <div class="card-body ">
                             <div className='justify-center lg:flex'>
                                 <div class="flex justify-center p-3 m-1 card w-38  bg-base-100 shadow-lg rounded bordered">
                                     <img className=' w-28 h-20' src={bkash} alt="Bkash" />
                                 </div>
                                 <div class="flex justify-center p-3 m-1  card w-38  bg-base-100 shadow-lg rounded bordered">
-                                    <Link to='/payment_overview'>  <img className=' lg:w-28 h-20' src={nagad} alt="Nagad" /></Link>
+                                    <Link to={`/payment_overview=${policy_no}=${proposer}=${amount}`}> <img className=' lg:w-28 h-20' src={nagad} alt="Nagad" /></Link>
                                 </div>
                                 <div class="flex justify-center p-3 m-1 card w-38  bg-base-100 shadow-lg rounded bordered">
                                     <img className=' lg:w-28 h-20' src={Rocket} alt="Rocket" />
@@ -75,7 +75,7 @@ const Pol_details = ({ product }) => {
 
 
             </div>
-        </div>
+        </div >
     );
 };
 
