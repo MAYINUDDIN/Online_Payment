@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import useStatement from '../hooks/useStatement';
 import Pol_details from './Pol_details';
 
 const PolicyStatement = () => {
 
-    // const [d] = useStatement();
-
-    // console.log(d);
-
+    const [error, setError] = useState('');
     const [relode, setRelode] = useState(false);
     const [astatement, setaStatement] = useState([]);
+    const navigate = useNavigate();
+
 
     console.log(astatement);
     // const handleStatement = event => {
@@ -36,6 +36,14 @@ const PolicyStatement = () => {
     const handleAdded = event => {
         event.preventDefault();
         const policy_no = (event.target.pol_no.value);
+        // if (policy_no < 10) {
+
+        //     setError('Policy Number no longer than 10 character')
+        //     navigate('/');
+        // } else {
+        //     // navigate('/');
+        // }
+
         console.log(policy_no);
         const addItem = { policy_no };
         const url = 'https://api.fareastislamilife.com/web_api/api/policy/policy-info';
@@ -64,7 +72,7 @@ const PolicyStatement = () => {
                             <label class="block text-left text-gray-700 text-sm  mb-2" for="username">
                                 *This  fields are mandatory
                             </label>
-                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name='pol_no' id="pol_no" type="number" placeholder="Policy Number" required />
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name='pol_no' id="pol_no" type="number" placeholder="Type Your Policy Number" required />
                         </div>
 
                         <button className='btn btn-success bg-[#087f23]  rounded btn-sm px-12 text-white font-bold'>Submit</button>

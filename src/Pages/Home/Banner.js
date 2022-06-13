@@ -13,7 +13,7 @@ const Banner = () => {
                     <h2 class="card-title font-bold text-end drop-shadow">  Pay Premium  </h2>
                     <h6 className='text-justify text-md'>Click to Pay your Premium Through Card/bKash/Online Banking</h6>
                     <div class="justify-left mt-5">
-                        <button class="bg-gradient-to-r from-cyan-500 to-blue-500 btn btn-success font-bold hover:to-success-500 rounded w-38 text-white outline-zinc-600 font-bold"> <Link to='/payment_channel'>PAYMENT NOW </Link>  </button>
+                        <Link to='/payment_channel'>  <button class="bg-gradient-to-r from-cyan-500 to-blue-500 btn btn-success font-bold hover:to-success-500 rounded w-38 text-white outline-zinc-600 font-bold"> PAYMENT NOW  </button> </Link>
                     </div>
                 </div>
 

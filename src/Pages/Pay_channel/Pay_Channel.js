@@ -12,7 +12,7 @@ const Pay_Channel = () => {
 
 
             <div className='flex justify-center'>
-                <div class="card w-full max-w-md bg-base-100 shadow-xl bordered">
+                <div class="card w-full max-w-md bg-base-100 shadow-xl bordered rounded">
                     <div class="card-body">
 
                         <div class="form-control">
@@ -43,7 +43,7 @@ const Pay_Channel = () => {
 
 
                         <div class="card-actions justify-center mt-5">
-                            <button class="bg-gradient-to-r  from-cyan-500 to-blue-500 btn btn-success btn-md text-md  hover:to-success-500 rounded w-32 text-white  font-bold"><Link to='/policy_details'>SUBMIT </Link></button>
+                            <Link to='/policy_details'>  <button class="bg-gradient-to-r  from-cyan-500 to-blue-500 btn btn-success btn-md text-md  hover:to-success-500 rounded w-32 text-white  font-bold">SUBMIT</button> </Link>
                         </div>
                     </div>
                 </div>
