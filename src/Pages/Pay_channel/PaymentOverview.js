@@ -3,21 +3,55 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import nagad from '../../assets/icon/nagad.jpg';
 const PaymentOverview = () => {
-    const { id, name, amout } = useParams();
+    const { id, name, amount } = useParams();
     const [details, setDetails] = useState([]);
     console.log(details);
-    console.log(id, name, amout);
+    console.log(id, name, amount);
 
     const amount_from = 'nagad'
+
+
+    // const handleSend = event => {
+    //     event.preventDefault();
+    //     const tk = (event.target.tk.value);
+    //     // console.log(id, name, amount, amount_from, tk);
+    //     const addItem = { tk };
+    //     const url = `https://api.fareastislamilife.com/web_api/api/policy/payment`;
+    //     fetch(url, {
+    //         method: "POST",
+    //         headers: {
+    //             "content-type": "application/json"
+    //         },
+    //         body: JSON.stringify(addItem)
+
+    //     })
+    //         .then(Response => Response.json())
+    //         .then(data => console.log(data));
+
+    // }
+
+
     const handleSend = event => {
         event.preventDefault();
-        console.log(id, name, amout, amount_from);
-        const addItem = { id, name, amout, amount_from };
-        const url = 'https://api.fareastislamilife.com/nagadPG/index.php';
+        const policy_no = (event.target.tk.value);
+        // if (policy_no < 10) {
+
+        //     setError('Policy Number no longer than 10 character')
+        //     navigate('/');
+        // } else {
+        //     // navigate('/');
+        // }
+
+        console.log(policy_no);
+        const addItem = { policy_no };
+        // const url = ('https://api.fareastislamilife.com/web_api/api/policy/payment', { mode: 'cors' });
+        // const url = 'https://api.fareastislamilife.com/nagadPG/index.php';
+        const url = ('https://api.fareastislamilife.com/nagadPG/index.php', { mode: 'cors' });
         fetch(url, {
             method: "POST",
             headers: {
-                "content-type": "application/json"
+                "content-type": "application/json",
+                'Access-Control-Allow-Origin': "http://localhost:3001",
             },
             body: JSON.stringify(addItem)
 
@@ -56,18 +90,40 @@ const PaymentOverview = () => {
                         <h3 className='text-dark text-sm  p-2 font-bold drop-shadow rounded bg-[#e0f2f1] text-left'>NAME       :{name} <span className='ml-20'>POLICY NUMBER: {id}</span> </h3>
 
  */}
-                        <h3 className='text-dark text-sm  p-2 font-bold drop-shadow rounded bg-[#e0f2f1] text-left'>PREMIUM AMOUNT DUE : <span className='lg:ml-20'>{amout}</span> </h3>
+                        <h3 className='text-dark text-sm  p-2 font-bold drop-shadow rounded bg-[#e0f2f1] text-left'>PREMIUM AMOUNT DUE : <span className='lg:ml-20'>{amount}</span> </h3>
 
                         <h3 className='text-dark text-sm  p-2 font-bold drop-shadow rounded  text-left'>PAYMENT GATEWAY USAGE FEE : <span className='lg:ml-9'>0</span> </h3>
 
-                        <h3 className='text-dark text-sm  p-2 font-bold drop-shadow rounded bg-[#e0f2f1] text-left'>TOTAL        : <span className='lg:ml-52'>{amout}</span> </h3>
+                        <h3 className='text-dark text-sm  p-2 font-bold drop-shadow rounded bg-[#e0f2f1] text-left'>TOTAL        : <span className='lg:ml-52'>{amount}</span> </h3>
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name='tk' type="number" placeholder='' value={amount} required />
 
                     </div>
                 </div>
 
             </div>
 
-            <button onClick={handleSend} className='btn btn-success btn-md mt-5 text-white px-8  rounded bg-[#087f23]'>PROCESS TO PAY</button>
+            <div class="w-full max-w-lg  py-4">
+                <form onSubmit={handleSend} class="bg-white shadow-xl card rounded bordered px-8 pt-2 pb-8 mb-1 p-5">
+                    <div class="mb-4">
+                        <label class="block text-left text-gray-700 text-sm  mb-2" for="username">
+                            *This  fields are mandatory
+                        </label>
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name='tk' type="number" placeholder='' value={amount} required />
+                    </div>
+
+                    <button className='btn btn-success bg-[#087f23]  rounded btn-sm px-12 text-white font-bold'>Submit</button>
+
+
+                </form>
+
+            </div>
+
+
+            {/* 
+            <a href="#" onClick={handleSend}>
+                Click me
+            </a> */}
+            <a href="https://api.fareastislamilife.com/nagadPG"><button className='btn btn-success btn-sm lg:btn-md mt-5 text-white px-8  rounded bg-[#087f23]'> PROCESS TO PAY </button></a>
         </div>
     );
 };

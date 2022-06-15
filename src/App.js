@@ -19,7 +19,7 @@ function App() {
         <Route path='/about' element={<About />}>Home</Route>
         <Route path='/policy_details' element={<PolicyStatement />}>PolicyStatement</Route>
         <Route path='/payment_channel' element={<Pay_Channel />}>Pay Channel</Route>
-        <Route path='/payment_overview=:id=:name=:amout' element={<PaymentOverview />}>Payment Overview</Route>
+        <Route path='/payment_overview=:id=:name=:amount' element={<PaymentOverview />}>Payment Overview</Route>
 
         <Route path='/contact_us' element={<ContactUs />}>Pay Channel</Route>
         <Route path='*' element={<Notfound />}>Home</Route>

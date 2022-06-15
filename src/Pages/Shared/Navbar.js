@@ -33,7 +33,8 @@ const Navbar = () => {
                     <li className='rounded font-bold text-white'><NavLink className='text-white' to='/'><AiOutlineHome />HOME</NavLink></li>
                     <li className=' pl-1 rounded  text-white  '><NavLink className='text-white' to='/about'>ABOUT FAREAST</NavLink ></li>
                     <li className='pl-1  text-white '><NavLink className='text-white' to='/contact_us'>CONTACT US</NavLink ></li>
-
+                    {/* <li className='pl-1  text-white '><NavLink className='text-white' to='https://api.fareastislamilife.com/nagadPG/index.php'></NavLink ></li> */}
+                    <li className='pl-1  text-white '> <a href="https://api.fareastislamilife.com/nagadPG">Payment Gateway</a></li>
                 </ul>
             </div>
 
